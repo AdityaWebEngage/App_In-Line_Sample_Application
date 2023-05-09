@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screens.Screen2_Activity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/Screen2View1"
+        android:tag="S2C1"
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="#B6CFCD"
+        >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/S2C1_campaignID_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/S2C1_campaignID"
+            android:text="Campaign Id" />
+
+        <TextView
+            android:id="@+id/S2C1_campaignID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/S2C1_campaignDeeplink_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:labelFor="@id/S2C1_deeplink"
+            android:text="Campaign Deeplink" />
+
+        <TextView
+            android:id="@+id/S2C1_deeplink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <TextView
+            android:id="@+id/S2C1_campaignData_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:labelFor="@id/S2C1_campaignData"
+            android:text="Campaign Data" />
+
+        <TextView
+            android:id="@+id/S2C1_campaignData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="4" />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.webengage.personalization.WEInlineView
+        android:id="@+id/Screen1View2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="24dp"
+        android:tag="S2V2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Screen2View1"
+        app:shouldCache="false" />
+</androidx.constraintlayout.widget.ConstraintLayout>
